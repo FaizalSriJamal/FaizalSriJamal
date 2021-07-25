@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Movies - Red House Cinemas</title>
+
+
+   <!-- import and link to Bootstrap CSS  -->
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- import Javascript -->
+   <script src="jquery/jquery-3.3.1.min.js"></script>
+   <script src="popper/popper.min.js"></script>
+   <script src="bootstrap/js/bootstrap.min.js">  </script>
+   <script src="bootstrap/js/bootstrap.bundle.js">  </script>
+   <script src="bootstrap/js/bootstrap.bundle.min.js">  </script>
+
+
+
+</head>
+
+<body>
+   <style>
+      .my-navbar {}
+
+      .my-navbar a:hover {
+         text-decoration: underline;
+
+      }
+   </style>
+
+   <header>
+      <div class="container">
+
+         <nav class="navbar navbar-expand-lg navbar-light  my-navbar">
+            <a class="navbar-brand" href="#"> <img src="redhouselogo.png" width="80"> </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Movies</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Promotions</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Contact</a>
+                  </li>
+               </ul>
+               <!-- Login Button-->
+               <form class="form-inline ml-auto mr-0">
+
+
+                  <a href="/Users/admin/Desktop/RedHouse/CA2/404.html" class="btn btn-outline-danger btn-sm">Login/Sign Up</a>
+
+
+               </form>
+            </div>
+         </nav>
+      </div>
+
+   </header>
+
+
+
+
+
+
+   <!-- Dropdown menu-->
+
+   <div class="container">
+      <form>
+         <div class="form-row justify-content-center">
+
+            <div class="col">
+
+               <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                  <option>Select movie...</option>
+                  <option>Disney's Cruella</option>
+                  <option>Fast & Furious 9</option>
+                  <option>Black Widow</option>
+                  <option>Space Jam 2</option>
+               </select>
+            </div>
+
+            <div class="col">
+
+               <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                  <option>Select date...</option>
+                  <option>Mon, 1 Aug 2021</option>
+                  <option>Tue, 2 Aug 2021</option>
+                  <option>Wed, 3 Aug 2021</option>
+                  <option>Thur, 4 Aug 2021</option>
+               </select>
+            </div>
+
+            <div class="col">
+
+               <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+                  <option>Select time...</option>
+                  <option>12:00 PM</option>
+                  <option>2:30 PM</option>
+                  <option>5:00 PM</option>
+                  <option>7:30 PM</option>
+               </select>
+            </div>
+
+            <!-- Book Button -->
+            <div class="d-flex">
+               <button type="button" href="https://www.facebook.com" class="btn btn-sm btn-danger ml-2">Book
+                  Now</button>
+            </div>
+
+
+
+         </div>
+
+      </form>
+
+   </div>
+
+   <hr>
+
+   <div class="container">
+
+      <!-- Breadcrumbs -->
+
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Movies</li>
+         </ol>
+      </nav>
+
+
+
+
+
+      <!-- Now showing -->
+      <div class="p-2 mb-4 bg-danger text-white font-weight-bold">Now Showing</div>
+
+      <div class="container ">
+
+         <div class="row mt-3 bg-light">
+            <div class="col-lg-2">
+               <div class="card border-light">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+            <div class="col-lg-2">
+               <div class="card border-light">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/img/nowshowingcruella.jpg" alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card border-light">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/images/hitmans-wifes-bodyguard-poster_thumb.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">The Hitman Wife's Bodyguard</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/images/fnf small.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/images/blackwidow small.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/images/venom .jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- 
+      <div class="row mt-1">
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg" alt="cruella small"></a>
+         </div>
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg" alt="cruella small"></a>
+         </div>
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg" alt="cruella small"></a>
+         </div>
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg" alt="cruella small"></a>
+         </div>
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-rachel-claire-4992652.jpg" alt="cruella small"></a>
+         </div>
+         <div class="col-lg-2"><img class="img-fluid"
+               src="/Users/admin/Desktop/RedHouse/CA2/pexels-rachel-claire-4992652.jpg" alt="cruella small"></a>
+         </div>
+
+
+
+
+      </div> -->
+
+      <br>
+
+      <!-- Coming Soon -->
+
+      <div class="p-2 mb-4 bg-danger text-white font-weight-bold">Coming Soon</div>
+
+      <div class="container ">
+
+         <div class="row mt-3">
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="col-lg-2">
+               <div class="card">
+                  <img style="width:100%" src="/Users/admin/Desktop/RedHouse/CA2/pexels-polina-kovaleva-6185245.jpg"
+                     alt="">
+                  <div class="card-body borderless">
+                     <h5 class="card-title ">This is Pain</h5>
+                     <p class="card-text">Pain is not everything</p>
+                     <p class="card-text">125 mins</p>
+                     <a href="#" class="btn btn-primary">Details</a>
+
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      <!-- Schedule section using table -->
+
+      <div class="p-2 mt-4 mb-2 bg-danger text-white font-weight-bold">Showtimes</div>
+
+
+      <p>Due to the COVID-19 situation, we have taken preventive measures and the utmost care for our patrons. There are
+         <em>limited seats</em>
+         available for each screening. We seek your kind understanding and patience. We apologize for any inconvenience.
+         For any <a href="contact.html">
+            feedback</a> or enquiries, do contact us.
+      </p>
+
+
+      <table class="table mt-5">
+         <thead class="thead-dark">
+            <tr>
+               <th scope="col">Time</th>
+               <th scope="col">Mon <br>1/6/2021</th>
+               <th scope="col">Tue<br>2/6/2021</th>
+               <th scope="col">Wed <br>3/6/2021</th>
+               <th scope="col">Thur<br>4/6/2021</th>
+               <th scope="col">Fri <br>5/6/2021</th>
+               <th scope="col">Sat <br>6/6/2021</th>
+               <th scope="col">Sun <br>7/6/2021</th>
+
+
+            </tr>
+         </thead>
+
+         <tbody>
+            <tr>
+               <th scope="row">12:00 PM</th>
+               <td>Cruella</td>
+               <td>Blimp</td>
+               <td>Catastrophe </td>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+               <td>Cruella </td>
+               <td>Blimp</td>
+            </tr>
+            <tr>
+               <th scope="row">2:30 PM</th>
+               <td>Blimp</td>
+               <td>Catastrophe </td>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+               <td>Cruella </td>
+               <td>Blimp</td>
+               <td>Catastrophe</td>
+            </tr>
+
+
+            <tr>
+               <th>5:00 PM </th>
+               <td>Catastrophe </td>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+               <td>Cruella </td>
+               <td>Blimp</td>
+               <td>Catastrophe</td>
+               <td>Electric Lady</td>
+            </tr>
+            <tr>
+               <th>7.30 PM</th>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+               <td>Cruella </td>
+               <td>Blimp</td>
+               <td>Catastrophe</td>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+            </tr>
+            <tr>
+               <th>9.00 PM </th>
+               <td>Mr Clean</td>
+               <td>Cruella </td>
+               <td>Blimp</td>
+               <td>Catastrophe</td>
+               <td>Electric Lady</td>
+               <td>Mr Clean</td>
+               <td>Cruella</td>
+
+            </tr>
+
+
+      </table>
+
+   </div>
+
+
+
+
+   <!-- Coming Soon Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Footer -->
+   <footer>
+
+      <div class="jumbotron  pt-0 mb-0">
+         <div class="container">
+            <div class="row">
+
+               <div class="col-lg-4">
+
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sitemap</h5>
+                  <ul class="list-unstyled">
+                     <li>
+                        <a href="#!">Movies</a>
+                     </li>
+                     <li>
+                        <a href="#!">Promotions</a>
+                     </li>
+                     <li>
+                        <a href="#!">Contact</a>
+                     </li>
+                  </ul>
+
+               </div>
+               <div class="col-lg-4">
+
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Business</h5>
+                  <ul class="list-unstyled">
+                     <li>
+                        <a href="#!">Details</a>
+                     </li>
+                     <li>
+                        <a href="#!">Careers</a>
+                     </li>
+                     <li>
+                        <a href="#!">Advertising</a>
+                     </li>
+                  </ul>
+
+               </div>
+
+               <div class="col-lg-4">
+
+                  <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Social Media</h5>
+                  <ul class="list-unstyled">
+                     <li>
+                        <a href="#" class=" fa fa-facebook"> </a>
+                     </li>
+                     <li>
+                        <a href="#" class="fa fa-instagram"> </a>
+                     </li>
+                     <li>
+                        <a href="#" class="fa fa-google"> </a>
+                     </li>
+                  </ul>
+
+               </div>
+
+
+
+
+
+
+            </div>
+         </div>
+      </div>
+
+
+   </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Red House Cinemas</title>
+
+
+  <!-- import and link to Bootstrap CSS  -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- import Javascript -->
+  <script src="jquery/jquery-3.3.1.min.js"></script>
+  <script src="popper/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js">  </script>
+  <script src="bootstrap/js/bootstrap.bundle.js">  </script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js">  </script>
+
+
+
+</head>
+
+<body>
+  <style>
+    .my-navbar {}
+
+    .my-navbar a:hover {
+      text-decoration: underline;
+
+    }
+  </style>
+
+  <header>
+    <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
+      <a class="navbar-brand" href="#"> <img src="redhouselogo.png" width="80"> </a>
+
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Promotions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <!-- Login Button-->
+        <form class="form-inline ml-auto mr-0">
+          
+          <a href="https://www.facebook.com" class="btn btn-outline-danger btn-sm">Login/Sign Up</a>
+
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+    
+  </header>
+
+
+
+
+
+
+  <!-- Dropdown menu-->
+
+  <div class="container">
+    <form>
+      <div class="form-row justify-content-center">
+
+        <div class="col">
+
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>Select movie...</option>
+            <option>Disney's Cruella</option>
+            <option>Fast & Furious 9</option>
+            <option>Black Widow</option>
+            <option>Space Jam 2</option>
+          </select>
+        </div>
+
+        <div class="col">
+
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>Select date...</option>
+            <option>Mon, 1 Aug 2021</option>
+            <option>Tue, 2 Aug 2021</option>
+            <option>Wed, 3 Aug 2021</option>
+            <option>Thur, 4 Aug 2021</option>
+          </select>
+        </div>
+
+        <div class="col">
+
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1">
+            <option>Select time...</option>
+            <option>12:00 PM</option>
+            <option>2:30 PM</option>
+            <option>5:00 PM</option>
+            <option>7:30 PM</option>
+          </select>
+        </div>
+
+        <!-- Book Button -->
+        <div class="d-flex">
+          <button type="button" class="btn btn-sm btn-danger ml-2">Book Now</button>
+        </div>
+
+
+
+      </div>
+
+    </form>
+
+  </div>
+
+  <hr>
+
+  <div class="container">
+
+    <div class="jumbotron bg-light">
+
+    <form>
+      <div class="form-group">
+        <label for="name">Name*</label> 
+        <input id="name" name="name" placeholder="Enter Name" type="text" class="form-control" required="required">
+      </div>
+      <div class="form-group">
+        <label for="email">Email*</label> 
+        <input id="email" name="email" placeholder="Enter Email" type="text" required="required" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number*</label> 
+        <input id="phone" name="phone" placeholder="########" type="text" class="form-control" required="required">
+      </div>
+      <div class="form-group">
+        <label for="bookingID">Enter Booking ID*</label> 
+        <input id="bookingID" name="bookingID" placeholder="Enter Booking ID" type="text" class="form-control" required="required">
+      </div> 
+      <div class="form-group">
+        <button name="submit" type="submit" class="btn btn-danger">Check Booking</button>
+      </div>
+    </form>
+
+  </div>
+
+    </div>
+
+  
+
+
+
+
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    
+      <div class="jumbotron  pt-0 mb-0">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-4">
+
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Sitemap</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Movies</a>
+                </li>
+                <li>
+                  <a href="#!">Promotions</a>
+                </li>
+                <li>
+                  <a href="#!">Contact</a>
+                </li>          
+              </ul>
+
+            </div>
+            <div class="col-lg-4">
+
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Business</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Details</a>
+                </li>
+                <li>
+                  <a href="#!">Careers</a>
+                </li>
+                <li>
+                  <a href="#!">Advertising</a>
+                </li>          
+              </ul>
+
+            </div>
+
+            <div class="col-lg-4">
+
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Social Media</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class=" fa fa-facebook">  </a>
+                </li>
+                <li>
+                  <a href="#" class="fa fa-instagram"> </a>
+                </li>
+                <li>
+                  <a href="#" class="fa fa-google">  </a>
+                </li>          
+              </ul>
+
+            </div>
+
+          
+            
+      
+        
+        
+        </div>
+
+ 
+  </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="Movies, Cinema, Cineplex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main - Red House Cinemas</title>
+
+  <!-- Link to Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/base_style.css">
+  <link rel="stylesheet" href="css/form_styles.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- Start Top Nav bar -->
+        <div class="container">
+            <div class="logo">
+              <img src="img/redhouselogo.png" alt="" width="130"/>
+              </div>
+            <nav>
+              <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movies.html">Movies</a></li>
+              <li><a href="#">Promotions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="login_register.html" target="_top"> Login/Register</a></li>
+              </ul>
+              </nav>
+            </div>
+      </header>
+
+  <!-- Start  Quick Search Form -->
+  <div class="formSection">
+    <form  method="POST">
+      <div class="bookingQuery">
+
+        <!-- Movie dropdown-->
+        <select name="selectMovie" id="selectMovieID">
+          <option value>Select movie...</option>
+          <option value="Cruella">Cruella (PG)</option>
+          <option value="Catastrophe">Catastrophe (PG)</option>
+          <option value="Blimp">Blimp (R21)</option>
+          <option value="ElectricLady">Electric Lady (M18)</option>
+          <option value="MrClean">Mr Clean (PG)</option>
+        </select>
+
+        <!-- Date dropdown -->
+        <select name="selectDate" id="selectDateID">
+          <option value>Select date...</option>
+          <option value="">1/6/2021</option>
+          <option value="">2/6/2021</option>
+          <option value="">3/6/2021</option>
+          <option value="">4/6/2021</option>
+          <option value="">5/6/2021</option>
+          <option value="">6/6/2021</option>
+          <option value="">7/6/2021</option>
+        </select>
+
+        <!-- Time dropdown-->
+        <select name="selectTime" id="selectTimeID">
+          <option value>Select Time...</option>
+          <option value="">12:00 PM</option>
+          <option value="">02:30 PM</option>
+          <option value="">05:00 PM</option>
+          <option value="">07:30 PM</option>
+          <option value="">09:00 PM</option>
+
+        </select>
+
+        <!-- submit button -->
+
+        <button value="Book Now"> Book Now </button>
+
+      </div>
+    </form>
+  </div>
+
+  <!-- end Quick Search form -->
+
+  <!-- Banner section -->
+  <!-- Image taken from Cathay Cineplex website https://www.cathaycineplexes.com.sg -->
+  <h1>Welcome to Red House Cinemas </h1>
+  <div class="banner">
+    <a href="cruella_details.html"><img src="img/cruella.jpeg" alt=""></a>
+</div>
+    <!-- Promotion Banners -->
+    <!-- Images were taken from Cathay Cineplex website https://www.cathaycineplexes.com.sg-->
+    <h1> Promotions </h1>
+    <div class="promotions">
+
+      <div class="promobanner"><a href=""><img src="img/promo1.jpeg" alt=""></a></div>
+      <div class="promobanner"><a href="#"><img src="img/promo4.jpg" alt=""></a></div>
+      <div class="promobanner"><a href="#"> <img src="img/promo3.jpeg" alt=""></a></div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+      <div class="sitemap">
+        <h3> Sitemap</h3>
+        <a href="movies.html">Movies</a>
+        <a href="#">Promotions</a>
+        <a href="contact.html">Contact Us</a>
+
+      </div>
+
+      <div class="aboutus">
+        <h3> About Us</h3>
+        <a href="#">Company Profile</a>
+        <a href="#">Milestones</a>
+        <a href="#">Giving Back</a>
+      </div>
+
+      <div class="business">
+        <h3> Business </h3>
+        <a href="#"> Details</a>
+        <a href="#">Careers</a>
+        <a href="#">Advertisements</a>
+      </div>
+
+      <div class="socialmedia">
+        <p>Find us on Social Media</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-google"></a>
+      </div>
+
+
+
+    </footer>
+
+</body>
+
+
+
+
+</html>

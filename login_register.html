@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Users/admin/Desktop/Red House/login_register.css">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Movies, Cinema, Cineplex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login/Register - Red House Cinemas </title>
+
+  <link rel="stylesheet" href="css/base_style.css">
+  <link rel="stylesheet" href="css/form_styles.css">
+  <link rel="stylesheet" href="css/login_register.css">
+
+
+
+</head>
+<body>
+  <header>
+    <!-- Start Top Nav bar -->
+        <div class="container">
+            <div class="logo">
+              <img src="img/redhouselogo.png" alt="" width="130"/>
+              </div>
+            <nav>
+              <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movies.html">Movies</a></li>
+              <li><a href="#">Promotions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="login_register.html">Login/Register</a></li>
+              </ul>
+              </nav>
+            </div>
+      </header>
+     
+     <!-- Start  Quick Search Form -->
+     <div class="formSection">
+      <form action="" method="POST">
+        <div class= "bookingQuery">
+              
+              <!-- Movie dropdown-->
+              <select name="selectMovie" id="selectMovieID">
+                <option value>Select movie...</option>
+                <option value="Cruella">Cruella (PG)</option>
+                <option value="Catastrophe">Catastrophe (PG)</option>
+                <option value="Blimp">Blimp (R21)</option>
+                <option value="ElectricLady">Electric Lady (M18)</option>
+                <option value="MrClean">Mr Clean (PG)</option>
+              </select>
+      
+              <!-- Date dropdown -->
+              <select name="selectDate" id="selectDateID">
+                <option value>Select date...</option>
+                <option value="">1/6/2021</option>
+                <option value="">2/6/2021</option>
+                <option value="">3/6/2021</option>
+                <option value="">4/6/2021</option>
+                <option value="">5/6/2021</option>
+                <option value="">6/6/2021</option>
+                <option value="">7/6/2021</option>
+              </select>
+      
+              <!-- Time dropdown-->
+              <select name="selectTime" id="selectTimeID">
+                <option value>Select Time...</option>
+                <option value="">12:00 PM</option>
+                <option value="">02:30 PM</option>
+                <option value="">05:00 PM</option>
+                <option value="">07:30 PM</option>
+                <option value="">09:00 PM</option>
+                
+              </select>
+  
+            <!-- submit button -->
+              
+                    <button value="Book Now"> Book Now </button>
+        </div>
+  </form> 
+  </div>
+
+<!-- end Quick Search form -->
+
+
+
+  <h1>New Account Registration</h1>
+<form action="" method="POST">
+   <div class="container">
+    
+    <p>To receive updates, promotions and news, register your account today!</p>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+   </div>
+  
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>
