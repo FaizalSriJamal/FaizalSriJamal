@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @FaizalSriJamal
 - 👀 I’m interested in ... coding, fitness, music and cooking
-- 🌱 I’m currently learning ... to code, to design and to become a developer
+- 🌱 I’m currently learning ... data analytics, data science and visualizations.
 - 💞️ I’m looking to collaborate on ... starter projects to learn more.
 - 📫 How to reach me ...
 
