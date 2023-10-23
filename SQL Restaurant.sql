@@ -72,3 +72,150 @@ SELECT CustomerID, Firstname, LastName, Address,City,State
 FROM Customers
 WHERE CustomerID = 26
 ;
+
+-- Remove incorrect information from the database.
+-- A customer named Norby has notified us he won't 
+-- be able to keep his Friday reservation. 
+-- Today is July 24, 2022.
+
+-- Find CustomerID and name of customer
+SELECT * 
+FROM Reservations
+JOIN Customers ON Reservations.CustomerID = Customers.CustomerID 
+WHERE Customers.FirstName = 'Norby' 
+AND Reservations.Date > '2022-07-24'
+;
+
+--remove reservation
+DELETE FROM Reservations 
+WHERE ReservationID=2000
+;
+
+--Register a customer for our Anniversary event.
+-- The customer 'atapley2j@kinetecoinc.com' will be in
+-- attendance, and will bring 3 friends.
+
+INSERT INTO
+AnniversaryAttendees 
+(CustomerID,PartySize)
+VALUES (
+ (SELECT CustomerID
+  FROM Customers
+  WHERE Email = 'atapley2j@kinetecoinc.com'),
+  4)
+;
+
+-- Find the reservation information for a customer whose
+-- name we aren't quite sure how to spell.
+-- Variations of the name include:
+-- Stevensen, Stephensen, Stevenson, Stephenson, Stuyvesant
+-- There are four people in the party. Today is June 14th.
+
+SELECT Customers.FirstName, Customers.LastName, Reservations.ReservationID,
+Reservations.Date, Reservations.PartySize
+FROM Reservations
+JOIN Customers ON Reservations.CustomerID = Customers.CustomerID
+WHERE Customers.LastName LIKE 'St%'
+AND Reservations.PartySize = 4
+ORDER BY Date DESC
+; 
+
+--Reservation name is under is Paco Stephenson
+
+-- Create a reservation for a customer who may or may not
+-- already be listed in our Customers table.
+
+-- Use the following information:
+-- Sam McAdams (smac@kinetecoinc.com), for 5 people
+-- on August 12, 2022 at 6PM (18:00)
+
+--Check Customer information
+SELECT *
+FROM Customers
+WHERE Email = 'smac@kinetecoinc.com';
+--no such customer
+
+--insert new customer information
+
+INSERT INTO Customers (FirstName, LastName, Email)
+VALUES ('Sam', 'McAdams', 'smac@kinetecoinc.com');
+
+INSERT INTO Reservations(CustomerID, Date, PartySize)
+VALUES ('102', '2022-08-12 18:00:00', '5');
+
+--check reservation details 
+SELECT Customers.FirstName, Customers.LastName, 
+Customers.Email, Reservations.ReservationID, 
+Reservations.Date,
+Reservations.PartySize
+FROM Customers
+JOIN Reservations ON Customers.CustomerID = Reservations.CustomerID
+WHERE Email = 'smac@kinetecoinc.com'
+;
+
+
+-- Enter a customer's delivery order into our database, 
+-- and provide the total cost of the items ordered.
+
+-- Use this order information:
+-- Customer: Loretta Hundey, at 6939 Elka Place
+-- Items: 1 House Salad, 1 Mini Cheeseburgers, and
+-- 1 Tropical Blue Smoothie
+-- Delivery date and time: September 20, 2022 @ 2PM (14:00)
+-- There are no taxes or other fees.
+
+--Find Customer ID and details
+SELECT CustomerID, FirstName, LastName, Address
+FROM Customers
+WHERE FirstName = 'Loretta'
+AND LastName = 'Hundey'
+;
+
+--create new order
+INSERT INTO Orders (CustomerID, OrderDate)
+VALUES (70, '2022-09-20 14:00:00');
+
+SELECT *
+FROM Orders
+ORDER BY OrderDate DESC;
+--orderID created 1001
+
+--Insert OrderID and DishIDs
+
+INSERT INTO OrdersDishes (OrderID, DishID)
+VALUES (1001,(SELECT DishID
+FROM Dishes
+WHERE Name ='House Salad')),
+(1001,(SELECT DishID
+FROM Dishes
+WHERE Name ='Mini Cheeseburgers')),
+(1001,(SELECT DishID
+FROM Dishes
+WHERE Name ='Tropical Blue Smoothie'))
+;
+
+SELECT OrderID, DishID
+FROM OrdersDishes
+WHERE OrderID = 1001;
+
+--check orders using Order ID
+SELECT *
+FROM Dishes
+JOIN OrdersDishes ON Dishes.DishID = OrdersDishes.DishID
+WHERE OrderID = 1001
+;
+
+--check total price
+SELECT SUM(Price)
+FROM Dishes
+JOIN OrdersDishes ON Dishes.DishID = OrdersDishes.DishID
+WHERE OrderID = 1001
+;
+
+--Total Price is $21.00
+
+
+
+
+
+
