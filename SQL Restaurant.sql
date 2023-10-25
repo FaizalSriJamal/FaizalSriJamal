@@ -251,6 +251,28 @@ JOIN Dishes ON Customers.FavoriteDish = Dishes.DishID
 WHERE Customers.CustomerID = 42
 ;
 
+-- Identify a few customers who have ordered delivery
+-- from the restaurant the most often, so we can send
+-- them a promotional coupon.
+
+--test out information
+SELECT DISTINCT CustomerID, COUNT(OrderID)
+FROM Orders
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10
+;
+
+
+SELECT COUNT(Orders.OrderID) AS No_of_orders,
+Customers.FirstName, Customers.LastName,
+Customers.Email
+FROM Customers 
+JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+GROUP BY Customers.CustomerID
+ORDER BY No_of_orders DESC
+LIMIT 10
+;
 
 
 
