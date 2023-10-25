@@ -215,6 +215,45 @@ WHERE OrderID = 1001
 --Total Price is $21.00
 
 
+-- Update information in the database.
+
+-- Set Cleo Goldwater's favorite dish to
+-- the Quinoa Salmon Salad.
+
+SELECT CustomerID
+FROM Customers
+WHERE FirstName LIKE 'CLEO'
+;
+--CustomerID for Cleo Goldwater is 42
+
+SELECT DishID
+FROM Dishes
+WHERE Name='Quinoa Salmon Salad'
+;
+--DishID for Quinoa Salmon Salad is 9
+
+-- -- Update details
+UPDATE Customers
+SET FavoriteDish = 9
+WHERE CustomerID = 42
+;
+
+SELECT * 
+FROM Customers
+WHERE CustomerID=42
+;
+
+SELECT Customers.FirstName, Customers.LastName,
+Customers.FavoriteDish,
+Dishes.Name
+FROM Customers
+JOIN Dishes ON Customers.FavoriteDish = Dishes.DishID
+WHERE Customers.CustomerID = 42
+;
+
+
+
+
 
 
 
