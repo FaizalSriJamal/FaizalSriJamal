@@ -51,3 +51,60 @@ FROM Books
 ORDER By BookID DESC
 LIMIT 5 
 ;
+
+-- Check out two books for Jack Vaan (jvaan@wisdompets.com).
+-- Book 1: The Picture of Dorian Gray, 2855934983
+-- Book 2: Great Expectations, 4043822646
+-- The checkout date is August 25, 2022 and the 
+-- due date is September 8, 2022.
+
+SELECT PatronID
+FROM Patrons
+WHERE Email = 'jvaan@wisdompets.com'
+;
+
+SELECT BookID
+FROM Books
+WHERE Barcode='2855934983' 
+;
+
+SELECT BookID
+FROM Books
+WHERE  Barcode='4043822646'
+;
+
+INSERT INTO Loans (BookID, PatronID, LoanDate, DueDate)
+VALUES ((SELECT BookID
+FROM Books
+WHERE Barcode='2855934983'),(SELECT PatronID
+FROM Patrons
+WHERE Email = 'jvaan@wisdompets.com'),'2022-08-25','2022-09-08'),
+((SELECT BookID
+FROM Books
+WHERE Barcode='4043822646'),(SELECT PatronID
+FROM Patrons
+WHERE Email = 'jvaan@wisdompets.com'),'2022-08-25','2022-09-08')
+;
+
+SELECT *
+FROM Loans
+ORDER BY LoanID DESC
+LIMIT 5;
+
+-- Prepare a report of books due to be returned
+-- to the library on July 13, 2022.
+-- Provide the due date, the book title, and
+-- the borrower's first name and email address.
+
+SELECT Loans.DueDate, 
+Books.Title,
+Patrons.FirstName,
+Patrons.LastName,
+Patrons.Email
+FROM Loans
+JOIN Books ON Loans.BookID=Books.BookID
+JOIN Patrons ON Loans.PatronID = Patrons.PatronID
+WHERE Loans.DueDate= '2022-07-13'
+AND Loans.ReturnedDate IS NULL
+;
+
