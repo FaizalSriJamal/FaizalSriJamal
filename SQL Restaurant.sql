@@ -271,7 +271,7 @@ FROM Customers
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 GROUP BY Customers.CustomerID
 ORDER BY No_of_orders DESC
-LIMIT 10
+LIMIT 6
 ;
 
 
